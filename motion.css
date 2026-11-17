@@ -1,0 +1,28 @@
+/* Seamless loop: two identical groups travel exactly one group width. */
+.signal-strip{position:relative}
+.signal-strip>.signal-track{display:flex;width:max-content;transform:none;animation:signal-scroll 32s linear infinite;will-change:transform}
+.signal-group{display:flex;align-items:center;flex-shrink:0;animation:signal-glitch 9s steps(1,end) infinite}
+.signal-strip i{display:inline-block}
+@keyframes signal-scroll{to{transform:translateX(-50%)}}
+@keyframes signal-glitch{
+  0%,94%,98%,100%{text-shadow:none;transform:none}
+  94.5%{text-shadow:2px 0 #f2f2e9,-2px 0 #ff2875;transform:skewX(-2deg)}
+  95%{text-shadow:-2px 0 #f2f2e9,2px 0 #3840ff;transform:none}
+  95.5%{text-shadow:none}
+  96%{text-shadow:1px 0 #ff2875,-1px 0 #f2f2e9}
+}
+.signal-strip:hover .signal-track,.signal-strip:hover .signal-group,
+.signal-strip:focus-within .signal-track,.signal-strip:focus-within .signal-group,
+.signal-strip.is-paused .signal-track,.signal-strip.is-paused .signal-group{animation-play-state:paused}
+.signal-toggle{position:absolute;right:0;top:0;bottom:0;min-width:72px;border:0;border-left:1px solid #10110f44;background:var(--acid);color:#10110f;font:bold 10px var(--mono);padding:0 12px;z-index:1;box-shadow:-12px 0 15px var(--acid)}
+.signal-toggle:hover{background:var(--ink)}
+.signal-toggle:focus-visible{outline-color:#10110f;outline-offset:-5px}
+.hero-manifesto{z-index:3;pointer-events:none;text-shadow:2px 2px 0 #10110f,0 0 12px #10110f88}
+.studio-frame{z-index:1}
+.sticker{z-index:3}
+.story-credit{color:var(--acid);text-decoration:underline;text-underline-offset:4px}
+.footer nav{flex-wrap:wrap}
+@media(prefers-reduced-motion:reduce){
+  .signal-strip>.signal-track,.signal-group{animation:none!important;transform:none;will-change:auto}
+  .signal-toggle{display:none}
+}

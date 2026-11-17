@@ -69,4 +69,3 @@ Les fonctionnalités présentées concernent la preview Studio sur `feat/studio-
 Logiciel : https://github.com/smldms/Acid-Recall. Fondations : https://github.com/pingw33n/OpenRB-338. Le logiciel est sous GPL-3.0-only ; le texte de la licence est dans `LICENSE` et les crédits figurent sur la page. Le code original de ce site est également fourni sous GPL-3.0-only. Les logos et captures fournis restent les ressources de marque du projet ; leur présence ne prétend pas accorder de droits de marque.
 
 Police Anton : SIL Open Font License, voir `assets/FONT-LICENSE.txt`.
-

@@ -1,0 +1,13 @@
+{
+  "name": "acid-recall-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ACID RECALL official static website — validation edition",
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "check": "node scripts/check.mjs",
+    "build": "node scripts/build.mjs"
+  },
+  "engines": { "node": ">=20" }
+}
